@@ -8,12 +8,12 @@ const modalEl = document.getElementById('modal-root');
 function Modal({ closeModal, children }) {
   useEffect(() => {
     window.addEventListener('keydown', onModalClose);
-  }, []);
+  });
   useEffect(() => {
     return () => {
       window.removeEventListener('keydown', onModalClose);
     };
-  }, []);
+  });
 
   function onModalClose(e) {
     if (e.target === e.currentTarget) {
